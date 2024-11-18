@@ -1,0 +1,82 @@
+---
+title: Introduction
+sidebar_position: 1
+---
+
+
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+Discora is a lightweight framework that simplifies building Discord bots with Discord.js. It enhances code readability, streamlines command and event handling, and supports customizable interactions. It also makes the setup easier, so you don’t need to follow the entire Discord.js guide.
+
+Building a Discord bot can be tricky, especially for new developers. Here are some common challenges:
+
+- ⚙️ **Complex Setup**: Managing commands and events can involve a lot of repetitive code, leading to mistakes.
+- 🔄 **Unorganized Event Logic**: Event handling can become hard to track, causing the bot to behave unpredictably.
+- 🧠 **Steep Learning Curve**: Learning how to set up a bot with Node.js and Discord.js can be tough.
+- 🐞 **Debugging Issues**: Poorly organized code can make fixing problems harder.
+
+<Tabs>
+  <TabItem value="Module" label="Module" default>
+    ```js
+    import { DiscoraClient } from "discora"
+
+    const client = new DiscoraClient({
+       root: process.cwd(),
+       token: "Your bot token",
+       clientId: "Your bot clientId",
+       guildId: "Your guild ID",
+       handler: { events: "/events", slash: "/commands" },
+       loader: { events: "flat", slash: "recursive" },
+       environment: "development",
+       client: { intents: ["GuildMessages", "GuildMembers"] },
+
+});
+
+client.start(); // Load commands & events, then start the bot
+
+````
+
+  </TabItem>
+  <TabItem value="commonjs" label="CommonJS">
+   ```js
+    const { DiscoraClient } = require("discora");
+
+    const client = new DiscoraClient({
+       root: process.cwd(),
+       token: "Your bot token",
+       clientId: "Your bot clientId",
+       guildId: "Your guild ID",
+       handler: { events: "/events", slash: "/commands" },
+       loader: { events: "flat", slash: "recursive" },
+       environment: "development",
+       client: { intents: ["GuildMessages", "GuildMembers"] },
+   });
+
+   client.start(); // Load commands & events, then start the bot
+````
+
+  </TabItem>
+  <TabItem value="typescript" label="TypeScript">
+   ```js
+    import { DiscoraClient } from "discora"
+
+    const client = new DiscoraClient({
+       root: process.cwd(),
+       token: "Your bot token",
+       clientId: "Your bot clientId",
+       guildId: "Your guild ID",
+       handler: { events: "/events", slash: "/commands" },
+       loader: { events: "flat", slash: "recursive" },
+       environment: "development",
+       client: { intents: ["GuildMessages", "GuildMembers"] },
+
+});
+
+client.start(); // Load commands & events, then start the bot
+
+```
+  </TabItem>
+</Tabs>
+

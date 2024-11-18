@@ -1,0 +1,41 @@
+---
+title: Getting Started
+---
+
+
+
+You can install Discora using npm:
+
+```bash
+npm i discora
+```
+
+Alternatively, you can quickly set up a new project with Discora using npx (recommended):
+
+```bash
+npx create-discora@latest
+```
+
+## Basics
+
+The Discora framework consists of a client, a loader, and handlers. This concept is simple and designed for easy contribution and extension.
+
+The Discora framework consists of a client, a loader, and handlers. This concept is very simple and not too complicated. It is designed this way so developers can contribute and add other concepts to make Discora even better.
+
+**DiscoraClient:** is a class that extends the Discord.js Client class adding features such as loading commands and events using a specfic type loader
+
+**Loader**: The loader reads your commands and events files, there are currently two types of loaders availble
+
+- `flat` - Loads the typescript and javascript files on the top level it does not load files within folders
+
+- `recursive` - Loads files and files nested within folders. It will load all the files within the commands directory, regardless of how deeply they are nested
+
+**Handlers:** Handlers are specifically used in slash commands. They help manage interactions that aren't traditional chat input commands but are still connected to a particular command.
+
+_These are the three concepts that makes Discora, and we will explore them further in this documention._
+
+## DiscoraClient
+
+The DiscoraClient extends the Discord.js Client class, handling most of the heavy lifting while still giving you full access to the underlying Client.
+
+This allows you to focus on your bot's functionality without worrying about the boilerplate. With DiscoraClient, managing commands, and events. other aspects of your bot becomes straightforward.
