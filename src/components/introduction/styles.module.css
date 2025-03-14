@@ -1,0 +1,30 @@
+/** @format */
+
+.intro {
+  text-align: center;
+  margin-bottom: 90px;
+  padding: 0px 80px;
+}
+
+.necord {
+  background: linear-gradient(to right, #3071d3, #5477ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.links {
+  margin: 10px 0;
+}
+
+.links a {
+  margin: 0 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.badges img {
+  margin: 5px;
+}

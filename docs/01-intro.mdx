@@ -1,82 +1,48 @@
 ---
 title: Introduction
 sidebar_position: 1
+slug: /
 ---
 
 
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import Introduction from "@site/src/components/introduction";
 
-Discora is a lightweight framework that simplifies building Discord bots with Discord.js. It enhances code readability, streamlines command and event handling, and supports customizable interactions. It also makes the setup easier, so you don’t need to follow the entire Discord.js guide.
+<Introduction />
 
-Building a Discord bot can be tricky, especially for new developers. Here are some common challenges:
+# Intro  
 
-- ⚙️ **Complex Setup**: Managing commands and events can involve a lot of repetitive code, leading to mistakes.
-- 🔄 **Unorganized Event Logic**: Event handling can become hard to track, causing the bot to behave unpredictably.
-- 🧠 **Steep Learning Curve**: Learning how to set up a bot with Node.js and Discord.js can be tough.
-- 🐞 **Debugging Issues**: Poorly organized code can make fixing problems harder.
+**Discora** makes Discord bot development easier by handling commands and events for you. Instead of setting up everything manually, just run the CLI and start building.  
 
-<Tabs>
-  <TabItem value="Module" label="Module" default>
-    ```js
-    import { DiscoraClient } from "discora"
+```bash
+npx create-discora@latest
+```  
 
-    const client = new DiscoraClient({
-       root: process.cwd(),
-       token: "Your bot token",
-       clientId: "Your bot clientId",
-       guildId: "Your guild ID",
-       handler: { events: "/events", slash: "/commands" },
-       loader: { events: "flat", slash: "recursive" },
-       environment: "development",
-       client: { intents: ["GuildMessages", "GuildMembers"] },
+## Common Challenges in Discord Bot Development  
 
-});
+🚧 **Complex Setup** – Setting up commands and events from scratch can be tedious and repetitive.  
 
-client.start(); // Load commands & events, then start the bot
+🔄 **Messy Event Logic** – Without a clear structure, managing events can quickly become unorganized.  
 
-````
+🧠 **Steep Learning Curve** – Getting started with Node.js and Discord.js can feel overwhelming.  
 
-  </TabItem>
-  <TabItem value="commonjs" label="CommonJS">
-   ```js
-    const { DiscoraClient } = require("discora");
+🐞 **Hard to Debug** – Troubleshooting issues is more difficult when the code is all over the place.  
 
-    const client = new DiscoraClient({
-       root: process.cwd(),
-       token: "Your bot token",
-       clientId: "Your bot clientId",
-       guildId: "Your guild ID",
-       handler: { events: "/events", slash: "/commands" },
-       loader: { events: "flat", slash: "recursive" },
-       environment: "development",
-       client: { intents: ["GuildMessages", "GuildMembers"] },
-   });
+## How Discora Helps  
 
-   client.start(); // Load commands & events, then start the bot
-````
+💡 **Open-Source & Community-Driven** – We want the community to be involved in making bot development easier for everyone.  
 
-  </TabItem>
-  <TabItem value="typescript" label="TypeScript">
-   ```js
-    import { DiscoraClient } from "discora"
+🛠 **Cleaner & More Organized** – Keeps your commands and events structured, so your bot is easier to maintain.  
 
-    const client = new DiscoraClient({
-       root: process.cwd(),
-       token: "Your bot token",
-       clientId: "Your bot clientId",
-       guildId: "Your guild ID",
-       handler: { events: "/events", slash: "/commands" },
-       loader: { events: "flat", slash: "recursive" },
-       environment: "development",
-       client: { intents: ["GuildMessages", "GuildMembers"] },
+⚡ **TypeScript Support** – Helps catch errors early and improves code reliability.  
 
-});
+🚀 **Proven in Production** – It’s been tested in real projects, so you can count on it to work.  
 
-client.start(); // Load commands & events, then start the bot
+## Built on Discord.js  
+Discora is built on top of Discord.js, meaning you get all the power and flexibility of Discord.js while working with a more structured and developer-friendly setup. You still have access to all the familiar APIs and methods, but with added simplicity and organization. This makes it easier to scale your bot, maintain clean code, and take advantage of everything Discord.js has to offer without the usual setup hassle.
 
-```
-  </TabItem>
-</Tabs>
+Get started and build bots faster with Discora.
+
 
