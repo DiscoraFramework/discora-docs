@@ -15,7 +15,7 @@ export default function Introduction() {
       </p>
 
       <div className={styles.links}>
-        <Link to="/docs">📖 Documentation</Link> •
+        <Link to="/">📖 Documentation</Link> •
         <Link to="https://github.com/DiscoraFramework/discora">🔗 Source code</Link> •
         <Link to="#">🛠 Examples</Link> •
         <Link to="https://github.com/DiscoraFramework">💬 Community</Link>
